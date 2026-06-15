@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("~/Views/Shared/Partials/_background.cshtml")
+
+<style>
+    a {
+      /*  -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease;*/
+        color: #000000;
+    }
+</style>
+
+<section class="ftco-section contact-section bg-light">
+    <div class="container">
+     
+        <div class="row d-flex mb-5" style="display: flex; flex-wrap: wrap;">
+            <div class="col-md-3 d-flex" style="flex: 1; margin-right: 20px;">
+                <div class="info bg-white p-4" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out;">
+                    <p style="margin-bottom: 0; font-size: 18px; font-weight: 600; color: black"> ADDRESS</p>
+                    <p style="margin-bottom: 0; color:black">140 Lê Trọng Tấn, Tây Thạnh, Tân Phú, TP.HCM</p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex" style="flex: 1; margin-right: 20px;">
+                <div class="info bg-white p-4" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out;">
+                    <p style="margin-bottom: 0; font-size: 18px; font-weight: 600; color: black"> PHONE</p>
+                    <p style="margin-bottom: 0; color: black"><a>+84 1234 4554</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex" style="flex: 1; margin-right: 20px;">
+                <div class="info bg-white p-4" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out;">
+                    <p style="margin-bottom: 0; font-size: 18px; font-weight: 600; color: black"> EMAIL</p>
+                    <p style="margin-bottom: 0; color: black"><a>sneakershop@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex" style="flex: 1;">
+                <div class="info bg-white p-4" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out;">
+                    <p style="margin-bottom: 0; font-size: 18px; font-weight: 600; color: black"> WEBSITE</p>
+                    <p style="margin-bottom: 0; color: black"><a>	sneakershop.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row block-9">
+            @*<div class="col-md-6 order-md-last d-flex">
+            <form action="#" class="bg-white p-5 contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Họ Tên">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tiêu đề">
+                </div>
+                <div class="form-group">
+                    <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Nội dung"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Gửi" class="btn btn-primary py-3 px-5" style="background:#000000">
+                </div>
+            </form>
+        </div>*@
+            <div class="col-md-6 order-md-last d-flex">
+                <form id="contactForm" action="@Url.Action("SubmitForm", "Home")" method="post" class="bg-white p-5 contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Họ Tên" id="txtName" name="HoTen">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email" id="txtEmail" name="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Tiêu đề" id="txtSubject" name="TieuDe">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="txtMessage" name="NoiDung" cols="30" rows="7" class="form-control" placeholder="Nội dung"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Gửi" class="btn btn-primary py-3 px-5" style="background:#000000">
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-md-6 d-flex">
+                <div class="bg-white">
+                    @*<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7838.684254869503!2d106.70676642475235!3d10.785086936675276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1547181657956" width="570" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>*@
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0624766960527!2d106.62628677480531!3d10.806526989344032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be2853ce7cd%3A0x4111b3b3c2aca14a!2zMTQwIMSQLiBMw6ogVHLhu41uZyBU4bqlbiwgVMOieSBUaOG6oW5oLCBUw6JuIFBow7osIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sus!4v1717231520445!5m2!1svi!2sus" width="570" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@Html.Partial("~/Views/Shared/Partials/_followus.cshtml")

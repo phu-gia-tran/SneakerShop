@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title - Sneaker Shop</title>
+    @Styles.Render("~/bundles/customer-css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="goto-here">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Sneaker Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="@Url.Action("Index", "Home")" class="nav-link">Trang chu</a></li>
+                    <li class="nav-item"><a href="@Url.Action("About", "Home")" class="nav-link">Gioi thieu</a></li>
+                    <li class="nav-item"><a href="@Url.Action("Contact", "Home")" class="nav-link">Lien he</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <footer class="ftco-footer ftco-section">
+        <div class="container text-center">
+            <p>Sneaker Shop</p>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/customer-js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

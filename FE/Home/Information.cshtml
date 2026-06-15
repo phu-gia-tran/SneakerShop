@@ -1,0 +1,43 @@
+﻿@model Sneaker.Models.KhachHang
+
+@{
+    ViewBag.Title = "Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="margin:100px 0 100px">
+    <h2 style="text-align:center;font-weight:bold">Thông Tin Khách Hàng</h2>
+    <table align="center" cellpadding="20">
+        <tr>
+            <th>
+                Họ Tên Khách Hàng:
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.HoTen)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Email:
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Email)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Địa Chỉ:
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.DiaChiKH)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Điện Thoại:
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.DienThoaiKH)
+            </td>
+        </tr>
+    </table>
+</div>
