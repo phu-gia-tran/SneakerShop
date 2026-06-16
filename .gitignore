@@ -1,11 +1,6 @@
 .vs/
-bin/
-obj/
-*.user
-*.suo
-*.cache
-*.log
-packages/.vs/
+**/.vs/
+
 *.user
 *.suo
 *.userosscache
