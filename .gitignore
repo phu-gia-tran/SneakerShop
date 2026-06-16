@@ -1,4 +1,11 @@
 .vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+packages/.vs/
 *.user
 *.suo
 *.userosscache
